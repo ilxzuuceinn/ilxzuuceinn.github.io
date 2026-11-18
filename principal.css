@@ -778,6 +778,26 @@ button:focus-visible {
     font-weight: 750;
 }
 
+#dify-chatbot-bubble-button {
+    background-color: var(--verde-oscuro) !important;
+    box-shadow: 0 8px 24px rgba(16, 61, 59, .25) !important;
+    transition: transform .2s ease, box-shadow .2s ease !important;
+}
+
+#dify-chatbot-bubble-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(16, 61, 59, .3) !important;
+}
+
+#dify-chatbot-bubble-window {
+    width: min(24rem, calc(100vw - 32px)) !important;
+    height: min(40rem, calc(100vh - 110px)) !important;
+    overflow: hidden;
+    border: 1px solid var(--borde) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 20px 60px rgba(16, 61, 59, .2) !important;
+}
+
 @media (max-width: 760px) {
     .barra {
         padding-right: 22px;
@@ -976,6 +996,13 @@ button:focus-visible {
     .objetivo-cabecera {
         align-items: flex-start;
         gap: 12px;
+    }
+
+    #dify-chatbot-bubble-window {
+        width: calc(100vw - 24px) !important;
+        height: min(40rem, calc(100vh - 96px)) !important;
+        right: 12px !important;
+        bottom: 84px !important;
     }
 
     .numero-objetivo {

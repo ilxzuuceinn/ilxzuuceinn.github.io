@@ -97,10 +97,36 @@ function inicializarPagina() {
         return;
     }
 
+    if (document.body.dataset.requiereSesion === "true") {
+        inicializarChatbot();
+    }
+
     let elementoUsuario = document.getElementById("usuarioActivo");
     if (elementoUsuario) {
         elementoUsuario.textContent = usuarioActivo;
     }
+}
+
+function inicializarChatbot() {
+    const token = "9yRbh6ahlEymLmwF";
+    if (document.getElementById(token)) {
+        return;
+    }
+
+    window.difyChatbotConfig = {
+        token: token,
+        baseUrl: "https://udify.app",
+        routeSegment: "agent",
+        inputs: {},
+        systemVariables: {},
+        userVariables: {}
+    };
+
+    let script = document.createElement("script");
+    script.src = "https://udify.app/embed.min.js";
+    script.id = token;
+    script.defer = true;
+    document.body.appendChild(script);
 }
 
 inicializarPagina();
