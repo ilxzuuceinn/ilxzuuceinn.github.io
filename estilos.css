@@ -1,134 +1,346 @@
-body {
-    margin: 0;
-    color: #24332f;
-    background-color: #f3f6f3;
-    font-family: Arial, sans-serif;
+:root {
+    --verde-oscuro: #103d3b;
+    --verde: #17665a;
+    --verde-claro: #e6f3ed;
+    --texto: #183330;
+    --texto-suave: #607571;
+    --borde: #dce8e2;
+    --blanco: #ffffff;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--texto);
+    background: #f5f8f6;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #5bbca6;
+    outline-offset: 3px;
+}
 
 .barra {
-    padding: 15px 30px;
-    background-color: #f3f6f3;
-    border-bottom: 1px solid #e1e7e2;
-    box-shadow: 0 2px 8px #24332f0d;
-    height: 30px; /* Le da altura fija al menú */
+    padding: 12px 6%;
+    background: rgba(255, 255, 255, .96);
+    border-bottom: 1px solid var(--borde);
 }
 
 .contenedor {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1120px, 100%);
+    min-height: 48px;
+    margin: 0 auto;
 }
-
 
 .marca {
-    float: left;
-    color: #24483d;
-    font-size: 22px;
-    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--verde-oscuro);
+    font-size: 21px;
+    font-weight: 750;
 }
 
+.imagenLogo {
+    width: 38px;
+    height: 32px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
 
 .enlaces {
-    float: right;
-    margin-top: 5px; 
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
-
 
 .enlaces a {
-    color: #315f50;         
-    font-weight: bold;      
-    margin-left: 25px;      
+    color: #355a53;
+    font-size: 14px;
+    font-weight: 650;
 }
 
+.enlaces a:hover,
+.alternativa a:hover {
+    color: #238a76;
+}
+
+.enlaces .enlace-destacado {
+    padding: 9px 15px;
+    color: var(--blanco);
+    background: var(--verde-oscuro);
+    border-radius: 8px;
+}
+
+.enlaces .enlace-destacado:hover {
+    color: var(--blanco);
+    background: var(--verde);
+}
+
+.acceso {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 420px);
+    align-items: center;
+    gap: clamp(36px, 7vw, 100px);
+    width: min(1080px, calc(100% - 48px));
+    min-height: calc(100vh - 125px);
+    margin: 0 auto;
+    padding: 58px 0;
+}
+
+.presentacion-acceso {
+    max-width: 580px;
+}
+
+.etiqueta {
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.presentacion-acceso h1 {
+    margin: 16px 0;
+    color: var(--verde-oscuro);
+    font-size: clamp(42px, 6vw, 64px);
+    font-weight: 750;
+    letter-spacing: -2.5px;
+    line-height: 1.04;
+}
+
+.presentacion-acceso > p {
+    max-width: 510px;
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.puntos-clave {
+    display: grid;
+    gap: 14px;
+    margin-top: 33px;
+}
+
+.puntos-clave span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #38554f;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.puntos-clave i {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    place-items: center;
+    color: var(--verde);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 800;
+    background: var(--verde-claro);
+    border-radius: 9px;
+}
+
+.panel-acceso {
+    padding: 34px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 19px;
+    box-shadow: 0 18px 50px rgba(16, 61, 59, .08);
+}
+
+.formulario-panel h2 {
+    margin: 7px 0 3px;
+    color: var(--verde-oscuro);
+    font-size: 27px;
+    letter-spacing: -.8px;
+}
+
+.formulario-panel > p:not(.mensaje):not(.alternativa) {
+    margin: 0 0 22px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.formulario-panel form {
+    display: grid;
+    gap: 8px;
+}
+
+.formulario-panel label {
+    margin-top: 5px;
+    color: #38554f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.formulario-panel input {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    color: var(--texto);
+    font: inherit;
+    font-size: 14px;
+    background: #fbfdfb;
+    border: 1px solid #d5e2dc;
+    border-radius: 8px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.formulario-panel input::placeholder {
+    color: #93a39e;
+}
+
+.formulario-panel input:focus {
+    border-color: #398e7b;
+    box-shadow: 0 0 0 3px rgba(91, 188, 166, .16);
+}
+
+.formulario-panel button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 46px;
+    margin-top: 8px;
+    padding: 11px 15px;
+    color: var(--blanco);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    background: var(--verde-oscuro);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.formulario-panel button:hover {
+    background: var(--verde);
+}
+
+.mensaje {
+    min-height: 20px;
+    margin: 9px 0 0;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.alternativa {
+    margin: 14px 0 0;
+    padding-top: 14px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    border-top: 1px solid #edf1ee;
+}
+
+.alternativa a {
+    color: var(--verde);
+    font-weight: 750;
+}
 
 #DivInicioSesion {
-    display: none;          
+    display: none;
 }
 
-.principal {
-    max-width: 748px;
-    margin: 0 auto;
-    padding: 64px 24px;
+.pie-acceso {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px;
+    color: #758781;
+    font-size: 12px;
 }
 
-.registro,
-.inicio {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 32px 28px;
-    text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #e1e7e2;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px #24332f12;
+.pie-acceso span {
+    color: var(--verde);
 }
 
-h1 {
-    margin: 0 0 14px;
-    color: #24483d;
-    font-size: 25px;
+@media (max-width: 760px) {
+    .acceso {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        width: min(520px, calc(100% - 36px));
+        padding: 46px 0;
+    }
+
+    .presentacion-acceso h1 {
+        font-size: 48px;
+    }
+
+    .puntos-clave {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
 }
 
-p {
-    color: #687771;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-input {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 7px 0;
-    padding: 12px 14px;
-    color: #24332f;
-    font-size: 14px;
-    background-color: #fbfcfb;
-    border: 1px solid #d5ded8;
-    border-radius: 7px;
-}
-
-input:focus {
-    background-color: #ffffff;
-    border-color: #527d6d;
-}
-
-button {
-    width: 100%;
-    margin-top: 14px;
-    padding: 12px 18px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: #315f50;
-    border: 1px solid #315f50;
-    border-radius: 7px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #24483d;
-}
-
-#mensaje1,
-#mensaje2 {
-    margin-top: 14px;
-    font-weight: bold;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .barra {
-        padding: 16px 20px;
+        padding: 10px 16px;
     }
 
     .marca {
-        margin-right: 10%; 
+        font-size: 18px;
     }
 
-    .principal {
-        padding: 32px 16px;
+    .imagenLogo {
+        width: 32px;
+        height: 28px;
     }
 
-    .registro,
-    .inicio {
-        padding: 28px 22px;
+    .enlaces {
+        gap: 12px;
+    }
+
+    .enlaces a {
+        font-size: 12px;
+    }
+
+    .enlaces .enlace-destacado {
+        padding: 7px 10px;
+    }
+
+    .acceso {
+        gap: 27px;
+        padding: 35px 0;
+    }
+
+    .presentacion-acceso h1 {
+        font-size: 42px;
+        letter-spacing: -1.7px;
+    }
+
+    .presentacion-acceso > p {
+        font-size: 14px;
+    }
+
+    .puntos-clave {
+        grid-template-columns: 1fr;
+        margin-top: 23px;
+    }
+
+    .panel-acceso {
+        padding: 25px 21px;
     }
 }

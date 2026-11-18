@@ -1,58 +1,73 @@
 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio - WindForce</title>
+    <meta name="theme-color" content="#103d3b">
+    <meta name="description" content="WindForce: ideas para conectar la energía eólica, la innovación y un futuro más sostenible.">
+    <title>WindForce | Energía que conecta</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="codigo.js" defer></script>
 </head>
-<body>
-
+<body class="pagina-acceso">
     <nav class="barra">
         <div class="contenedor">
-            <a class="marca" href="#">
-                <img src="img/wind.png" alt="Logo" width="30" height="24" class="imagenLogo">
-                WindForce
+            <a class="marca" href="index.html">
+                <img src="img/wind.png" alt="" class="imagenLogo">
+                <span>WindForce</span>
             </a>
             <div class="enlaces">
-                <a href="#" onclick="mostrarInicioSesion()">Iniciar Sesión</a>
-                <a href="#" onclick="mostrarRegistro()">Registrarse</a>
+                <a href="#" onclick="mostrarInicioSesion(); return false;">Iniciar sesión</a>
+                <a class="enlace-destacado" href="#" onclick="mostrarRegistro(); return false;">Crear cuenta</a>
             </div>
         </div>
     </nav>
 
-    <div class="principal">
-        
-        
-        <div id="DivRegistro" class="registro">
-            <h1>Crear cuenta</h1>
-            <p>Cree su cuenta para guardar sus datos</p>
-            <div class="formulario">
-                <input type="text" id="nuevoUsuario" placeholder="Crear usuario">
-                <br>
-                <input type="password" id="nuevaContrasena" placeholder="Crear contraseña">
-                <br>
-                <button onclick="registrar()">Registrarse</button>
+    <main class="acceso">
+        <section class="presentacion-acceso">
+            <span class="etiqueta">ENERGÍA LIMPIA · MOVILIDAD · INNOVACIÓN</span>
+            <h1>El viento nos mueve hacia un futuro mejor.</h1>
+            <p>En WindForce exploramos cómo la energía eólica y las nuevas ideas pueden ayudar a conectar personas, destinos y comunidades de una manera más responsable.</p>
+            <div class="puntos-clave" aria-label="Enfoques de WindForce">
+                <span><i aria-hidden="true">01</i> Energía renovable</span>
+                <span><i aria-hidden="true">02</i> Transporte responsable</span>
+                <span><i aria-hidden="true">03</i> Acción en comunidad</span>
             </div>
-            <p id="mensaje1"></p>
-        </div>
+        </section>
 
-       
-        <div id="DivInicioSesion" class="inicio">
-            <h1>Inicio de Sesión</h1>
-            <p>Ingrese su usuario y contraseña para poder continuar</p>
-            <div class="formulario">
-                <input type="text" id="usuario" placeholder="Nombre de usuario">
-                <br>
-                <input type="password" id="contrasena" placeholder="Contraseña">
-                <br>
-                <button onclick="iniciarSesion()">Inicio de Sesión</button>
+        <section class="panel-acceso" aria-label="Acceso a WindForce">
+            <div id="DivRegistro" class="formulario-panel">
+                <span class="etiqueta">ÚNETE A WINDFORCE</span>
+                <h2>Crea tu cuenta</h2>
+                <p>Regístrate para conocer nuestras ideas, objetivos y avances.</p>
+                <form onsubmit="registrar(); return false;">
+                    <label for="nuevoUsuario">Nombre de usuario</label>
+                    <input type="text" id="nuevoUsuario" placeholder="Tu nombre de usuario" autocomplete="username" required>
+                    <label for="nuevaContrasena">Contraseña</label>
+                    <input type="password" id="nuevaContrasena" placeholder="Crea una contraseña" autocomplete="new-password" required>
+                    <button type="submit">Crear cuenta <span aria-hidden="true">→</span></button>
+                </form>
+                <p id="mensaje1" class="mensaje" aria-live="polite"></p>
+                <p class="alternativa">¿Ya tienes una cuenta? <a href="#" onclick="mostrarInicioSesion(); return false;">Inicia sesión</a></p>
             </div>
-            <p id="mensaje2"></p>
-        </div>
 
-    </div>
-
+            <div id="DivInicioSesion" class="formulario-panel">
+                <span class="etiqueta">QUÉ BUENO TENERTE AQUÍ</span>
+                <h2>Inicia sesión</h2>
+                <p>Ingresa a tu cuenta para continuar explorando WindForce.</p>
+                <form onsubmit="iniciarSesion(); return false;">
+                    <label for="usuario">Nombre de usuario</label>
+                    <input type="text" id="usuario" placeholder="Tu nombre de usuario" autocomplete="username" required>
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" placeholder="Tu contraseña" autocomplete="current-password" required>
+                    <button type="submit">Iniciar sesión <span aria-hidden="true">→</span></button>
+                </form>
+                <p id="mensaje2" class="mensaje" aria-live="polite"></p>
+                <p class="alternativa">¿Aún no tienes cuenta? <a href="#" onclick="mostrarRegistro(); return false;">Regístrate</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="pie-acceso">WindForce <span>·</span> Ideas impulsadas por el viento.</footer>
 </body>
 </html>

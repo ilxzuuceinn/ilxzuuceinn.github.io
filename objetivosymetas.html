@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#103d3b">
+    <meta name="description" content="Tres objetivos y metas medibles para promover la energía eólica, la innovación y la participación sostenible.">
     <title>Objetivos y metas - WindForce</title>
     <link rel="stylesheet" href="principal.css">
     <script src="codigo.js" defer></script>
 </head>
 <body data-requiere-sesion="true">
-    <nav class="barra">
+    <nav class="barra" aria-label="Navegación principal">
         <div class="contenedor">
             <a class="marca" href="principal.html">
                 <img src="img/wind.png" alt="Logo de WindForce" width="30" height="24">
@@ -17,66 +19,91 @@
             <div class="enlaces">
                 <a href="principal.html">Inicio</a>
                 <a href="conocenos.html">Conócenos</a>
+                <a href="objetivosymetas.html" aria-current="page">Objetivos y metas</a>
+                <a href="estrategias.html">Estrategias</a>
+                <a href="productos.html">Productos</a>
+                <a href="contactanos.html">Contactanos</a>
                 <button class="salir" onclick="cerrarSesion()">Cerrar sesión</button>
             </div>
         </div>
     </nav>
 
-    <div class="tarjeta">
-        <h1>Objetivos y metas</h1>
-        <p>En WindForce creemos que conectar destinos también puede significar avanzar hacia un futuro más responsable con el planeta.</p>
-        <div class="galeria-imagenes">
-            <img class="imagen-ilustrativa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN3ruIXX2_G-uLFT6IiMx3jHFD3jt7UC_CURszMaEX3A&amp;s=10" alt="Imagen relacionada con la energía sostenible">
-            <img class="imagen-ilustrativa" src="https://www.avionrevue.com/wp-content/uploads/2024/01/mexico-aerop.jpg" alt="Aeropuerto en México">
-        </div>
+    <main class="contenido pagina-interior">
+        <header class="encabezado-pagina">
+            <span class="etiqueta">UNA VISIÓN, ACCIONES MEDIBLES</span>
+            <h1>Objetivos y metas</h1>
+            <p>Definimos tres objetivos para orientar nuestro trabajo. Cada uno cuenta con metas cuantificables y un plazo para evaluar el progreso.</p>
+            <p class="nota-medicion">Las cifras son metas de planificación del proyecto; se medirán desde el inicio de cada periodo indicado.</p>
+        </header>
 
-        <div class="bloque">
-            <h2>Nuestro primer objetivo</h2>
-            <p>Maximizar el aprovechamiento de la energía eólica mediante la implementación de tecnologías innovadoras que mejoren la eficiencia energética del sector aeronáutico.</p>
-        </div>
+        <section class="objetivos-lista" aria-label="Objetivos y metas de WindForce">
+            <article class="objetivo">
+                <div class="objetivo-cabecera">
+                    <span class="numero-objetivo">01</span>
+                    <div><span class="etiqueta">INFORMACIÓN Y CONCIENCIA</span><h2>Acercar la energía eólica a más personas</h2></div>
+                </div>
+                <p class="descripcion-objetivo">Compartir información accesible sobre el funcionamiento, los beneficios y los retos de la energía eólica para fomentar una comprensión informada.</p>
+                <ol class="lista-metas">
+                    <li><span class="meta-numero">01</span><p><strong>Aumentar en 20%</strong> el alcance de nuestras publicaciones educativas sobre los beneficios de la energía eólica <strong>durante los próximos 6 meses</strong>, comparado con el semestre anterior.</p></li>
+                    <li><span class="meta-numero">02</span><p>Publicar <strong>12 recursos informativos</strong> sobre energía eólica y completar el <strong>100% del calendario editorial</strong> <strong>en los próximos 6 meses</strong>.</p></li>
+                    <li><span class="meta-numero">03</span><p>Lograr que <strong>al menos 70%</strong> de las personas encuestadas identifique dos beneficios de la energía eólica <strong>al finalizar los próximos 12 meses</strong>.</p></li>
+                    <li><span class="meta-numero">04</span><p>Incrementar en <strong>15%</strong> las interacciones con nuestros contenidos educativos <strong>en los próximos 9 meses</strong>, respecto al periodo inicial de medición.</p></li>
+                </ol>
+            </article>
 
-        <div class="bloque">
-            <h2>Metas</h2>
-            <p>1. Meta 1: Implementar sistemas de aprovechamiento de energía eólica en al menos 3 infraestructuras aeroportuarias estratégicas en un plazo de 12 meses, reduciendo el consumo de energía convencional en un 20%.</p>
-            <p>2. Meta 2: Desarrollar y testear en un periodo de 8 meses 2 nuevas soluciones tecnológicas que mejoren en un 15% la eficiencia de los sistemas de generación eólica existentes.</p>
-            <p>3. Meta 3: Promover la investigación y desarrollo de sistemas avanzados de almacenamiento de energía renovable mediante 2 proyectos piloto durante los próximos 18 meses.</p>
-            <p>4. Meta 4: Establecer un protocolo de evaluación del rendimiento energético de las instalaciones con auditorías trimestrales durante un plazo continuo de 6 meses.</p>
-        </div>
+            <article class="objetivo">
+                <div class="objetivo-cabecera">
+                    <span class="numero-objetivo">02</span>
+                    <div><span class="etiqueta">INNOVACIÓN Y MOVILIDAD</span><h2>Explorar conexiones entre energía y transporte</h2></div>
+                </div>
+                <p class="descripcion-objetivo">Investigar y comunicar oportunidades para que la eficiencia energética y las tecnologías limpias formen parte de la conversación sobre movilidad y aviación.</p>
+                <ol class="lista-metas">
+                    <li><span class="meta-numero">01</span><p>Desarrollar <strong>3 propuestas conceptuales</strong> sobre eficiencia energética y transporte, completando el <strong>100% de la meta anual</strong> <strong>en los próximos 12 meses</strong>.</p></li>
+                    <li><span class="meta-numero">02</span><p>Lograr que <strong>67% de las personas participantes</strong> reconozca al menos una oportunidad de innovación sostenible <strong>al cierre de los próximos 9 meses</strong>.</p></li>
+                    <li><span class="meta-numero">03</span><p>Incrementar en <strong>20%</strong> la participación en conversaciones o actividades sobre energía y movilidad <strong>en los próximos 12 meses</strong>, tomando como referencia el primer trimestre.</p></li>
+                    <li><span class="meta-numero">04</span><p>Publicar <strong>4 análisis breves</strong> de tecnologías y prácticas sostenibles vinculadas al transporte, cumpliendo el <strong>100% de la meta editorial</strong> <strong>en los próximos 12 meses</strong>.</p></li>
+                </ol>
+            </article>
 
-        <div class="bloque">
-            <h2>Nuestro segundo objetivo</h2>
-            <p>Expandir la presencia de WindForce en diferentes regiones del mundo, promoviendo el uso de la energía eólica y fortaleciendo nuestra participación en el sector aeronáutico en un plazo de 1 a 2 años.</p>
-        </div>
+            <article class="objetivo">
+                <div class="objetivo-cabecera">
+                    <span class="numero-objetivo">03</span>
+                    <div><span class="etiqueta">COMUNIDAD Y ACCIÓN</span><h2>Fomentar hábitos y alianzas sostenibles</h2></div>
+                </div>
+                <p class="descripcion-objetivo">Invitar a las personas y organizaciones a participar, intercambiar conocimientos y convertir el interés por la sostenibilidad en acciones cotidianas.</p>
+                <ol class="lista-metas">
+                    <li><span class="meta-numero">01</span><p>Organizar <strong>4 actividades de sensibilización</strong>, una por trimestre, y completar el <strong>100% del calendario anual</strong> <strong>en los próximos 12 meses</strong>.</p></li>
+                    <li><span class="meta-numero">02</span><p>Aumentar en <strong>25%</strong> la asistencia comunitaria promedio <strong>en los próximos 12 meses</strong>, respecto al promedio registrado durante el primer trimestre.</p></li>
+                    <li><span class="meta-numero">03</span><p>Establecer <strong>3 colaboraciones</strong> con centros educativos u organizaciones comunitarias y alcanzar el <strong>100% de la meta anual</strong> <strong>en los próximos 12 meses</strong>.</p></li>
+                    <li><span class="meta-numero">04</span><p>Conseguir que <strong>60% de las personas participantes</strong> indique una acción sostenible que pondrá en práctica <strong>al cierre de cada actividad durante los próximos 12 meses</strong>.</p></li>
+                </ol>
+            </article>
+        </section>
 
-        <div class="bloque">
-            <h2>Metas</h2>
-            <p>1. Meta 1: Concretar al menos 5 alianzas estratégicas con empresas aeronáuticas y energéticas clave a nivel nacional e internacional dentro de los primeros 12 meses.</p>
-            <p>2. Meta 2: Ingresar a 2 nuevos mercados internacionales enfocados en energías renovables en un plazo máximo de 18 meses.</p>
-            <p>3. Meta 3: Participar activamente en por lo menos 3 proyectos internacionales de infraestructura aeroportuaria sostenible al cabo de 24 meses.</p>
-            <p>4. Meta 4: Formalizar una red global de colaboración con 10 instituciones comprometidas con la sostenibilidad energética en un periodo de 15 meses.</p>
-        </div>
+        <section class="seccion seccion-galeria galeria-tres" aria-labelledby="titulo-galeria-objetivos">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">ENERGÍA EN ACCIÓN</span>
+                <h2 id="titulo-galeria-objetivos">Un futuro que podemos impulsar</h2>
+                <p>La innovación, la energía limpia y el trabajo en comunidad dan forma a nuestros objetivos.</p>
+            </div>
+            <div class="galeria-imagenes">
+                <div class="foto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBjKf-wXp37ot6z4WHhChD1G6yLp5HjSLEmLdjGenqP-whMZW8TV7nA6w&amp;s=10" alt="Imagen relacionada con la energía renovable y la sostenibilidad." loading="lazy" decoding="async">
+                </div>
+                <div class="foto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTT2O7ux_19VE8Y2Gs2HaB_47hexJP-4nUvuldNcXO-y14YrjUjzQ_d8E&amp;s=10" alt="Imagen relacionada con la energía renovable y la sostenibilidad." loading="lazy" decoding="async">
+                </div>
+                <div class="foto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcImisHoqVU468oUGwpf7jatEACQ_zAupRaSQknCoPbg&amp;s=10" alt="Imagen relacionada con la energía renovable y la sostenibilidad." loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
 
-        <div class="bloque">
-            <h2>Nuestro tercer objetivo</h2>
-            <p>Contribuir a la reducción del impacto ambiental de la industria aeronáutica mediante el desarrollo y la promoción de soluciones energéticas sostenibles.</p>
-        </div>
-
-        <div class="bloque">
-            <h2>Metas</h2>
-            <p>1. Meta 1: Reducir en un 25% las emisiones de gases de efecto invernadero asociadas al consumo de energía convencional en nuestras instalaciones en un lapso de 6 meses.</p>
-            <p>2. Meta 2: Sustituir el 50% del consumo de fuentes no renovables por alternativas limpias en nuestras operaciones principales en un plazo de 10 meses.</p>
-            <p>3. Meta 3: Diseñar y lanzar 2 campañas de concientización ambiental de alcance regional dentro de los próximos 4 meses.</p>
-            <p>4. Meta 4: Impulsar 3 iniciativas internas orientadas al uso responsable de recursos y protección de ecosistemas en un periodo de 9 meses.</p>
-        </div>
-
-        <div class="bloque">
-            <h2>Nuestro compromiso</h2>
-            <p>Trabajamos con una visión de mejora continua. Cada iniciativa es una oportunidad para aprender, colaborar y acercarnos a una forma más sostenible de conectar personas y destinos.</p>
-        </div>
-        <br>
-        <br>
-        
-        <a class="boton2" href="conocenos.html">Conoce más sobre WindForce</a>
-    </div>
+        <section class="llamada-accion">
+            <div><h2>El progreso se construye en equipo.</h2><p>Conoce más sobre las ideas y valores que dan forma a WindForce.</p></div>
+            <a class="boton1" href="conocenos.html">Conócenos <span aria-hidden="true">→</span></a>
+        </section>
+    </main>
+    <footer class="pie-pagina"><span>WindForce</span><span>Energía que conecta.</span></footer>
 </body>
 </html>

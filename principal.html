@@ -3,45 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <meta name="theme-color" content="#103d3b">
+    <meta name="description" content="Conoce la visión de WindForce: energía eólica, innovación y movilidad sostenible.">
+    <title>Inicio | WindForce</title>
     <link rel="stylesheet" href="principal.css">
     <script src="codigo.js" defer></script>
 </head>
 <body data-requiere-sesion="true">
-    <nav class="barra">
+    <nav class="barra" aria-label="Navegación principal">
         <div class="contenedor">
             <a class="marca" href="principal.html">
                 <img src="img/wind.png" alt="Logo de WindForce" class="imagenLogo">WindForce
             </a>
             <div class="enlaces">
+                <a href="principal.html" aria-current="page">Inicio</a>
                 <a href="conocenos.html">Conócenos</a>
                 <a href="objetivosymetas.html">Objetivos y metas</a>
+                <a href="estrategias.html">Estrategias</a>
+                <a href="productos.html">Productos</a>
+                <a href="contactanos.html">Contactanos</a>
                 <button class="salir" onclick="cerrarSesion()">Cerrar sesión</button>
             </div>
         </div>
     </nav>
 
-    <main>
-        <section class="portada" aria-label="WindForce">
-            <h1 class="lema">¡Conectando destinos, impulsados por el viento!</h1>
-            <img class="imagen1" src="img/wind.png" alt="Logotipo de WindForce: un aerogenerador y un avión">
-            <div class="galeria-imagenes">
-                <img class="imagen-ilustrativa" src="https://amdee.org/wp-content/uploads/63221c_1f3879662bdc4c8aa190fb32820d2e75mv2.gif" alt="Energía eólica y generación renovable">
-                <img class="imagen-ilustrativa" src="https://www.itcsa.es/wp-content/uploads/Terminal-aeropuerto-1.jpg" alt="Terminal de aeropuerto">
+    <main class="contenido">
+        <section class="portada" aria-label="Presentación de WindForce">
+            <div class="portada-texto">
+                <span class="etiqueta">ENERGÍA PARA UN MUNDO EN MOVIMIENTO</span>
+                <h1 class="lema">Conectamos destinos. Nos impulsa el viento.</h1>
+                <p>Imaginamos un futuro donde la innovación y las energías renovables abren nuevas posibilidades para el transporte y nuestras comunidades.</p>
+                <a class="boton1" href="objetivosymetas.html">Explora nuestros objetivos <span aria-hidden="true">→</span></a>
+            </div>
+            <img class="imagen1" src="img/wind.png" alt="Ilustración de un aerogenerador y un avión">
+        </section>
+
+        <section class="bienvenida">
+            <div>
+                <span class="etiqueta">TU ESPACIO WINDFORCE</span>
+                <h2>¡Bienvenido, <span id="usuarioActivo"></span>!</h2>
+                <p>Gracias por formar parte de una conversación que busca transformar buenas ideas en acciones sostenibles.</p>
+            </div>
+            <a class="boton-secundario" href="conocenos.html">Conoce nuestro proyecto <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="seccion">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">NUESTRO ENFOQUE</span>
+                <h2>Un futuro que toma impulso</h2>
+                <p>La transición sostenible requiere información, colaboración e ideas que puedan convertirse en acciones concretas.</p>
+            </div>
+            <div class="rejilla-tarjetas">
+                <article class="tarjeta-enfoque">
+                    <span class="numero-tarjeta">01</span>
+                    <h3>Energía del viento</h3>
+                    <p>Compartimos cómo la energía eólica aprovecha un recurso renovable y puede contribuir a diversificar las fuentes de energía.</p>
+                </article>
+                <article class="tarjeta-enfoque">
+                    <span class="numero-tarjeta">02</span>
+                    <h3>Innovación responsable</h3>
+                    <p>Promovemos el diálogo sobre soluciones tecnológicas y prácticas que integren eficiencia y cuidado del entorno.</p>
+                </article>
+                <article class="tarjeta-enfoque">
+                    <span class="numero-tarjeta">03</span>
+                    <h3>Comunidades informadas</h3>
+                    <p>Creemos que aprender y colaborar con cada comunidad es esencial para avanzar hacia decisiones más sostenibles.</p>
+                </article>
             </div>
         </section>
 
-        <section class="tarjeta">
-            <h1>¡Bienvenido <span id="usuarioActivo"></span>!</h1>
-            <p>¡Has iniciado sesión!</p>
-            <div class="bloque">
-                <h2>¿Quiénes somos?</h2>
-                <p>WindForce es una empresa relacionada con las aerolíneas y la energía eólica. Buscamos la manera de optimizar al máximo el uso de esta energía con tal de contribuir a un futuro más sostenible.</p>
-                <p>Nos encontramos en varias ubicaciones a nivel nacional e internacional, fomentando el uso de la energía eólica.</p>
-                <a class="boton1" href="conocenos.html">Conócenos</a>
-                <a class="boton1" href="objetivosymetas.html">Objetivos y metas</a>
-            </div>
-        </section>
     </main>
+    <footer class="pie-pagina"><span>WindForce</span><span>Energía que conecta.</span></footer>
 </body>
 </html>
