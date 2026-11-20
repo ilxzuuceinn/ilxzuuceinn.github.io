@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title description">
+  <title id="title">Bateria para sistema eolico</title>
+  <desc id="description">Ilustracion de una bateria de almacenamiento de 12 voltios</desc>
+  <rect width="800" height="450" fill="#e9f4ef"/>
+  <circle cx="400" cy="225" r="175" fill="#d1e9df"/>
+  <rect x="225" y="118" width="350" height="214" rx="28" fill="#103d3b"/>
+  <rect x="246" y="139" width="308" height="172" rx="18" fill="#17665a"/>
+  <rect x="344" y="92" width="112" height="36" rx="12" fill="#103d3b"/>
+  <rect x="360" y="74" width="80" height="34" rx="8" fill="#103d3b"/>
+  <rect x="325" y="82" width="150" height="18" rx="9" fill="#5bbca6"/>
+  <text x="400" y="214" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="800" text-anchor="middle">12V</text>
+  <text x="400" y="260" fill="#d7eee5" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle">ALMACENAMIENTO</text>
+  <path d="M177 340c55-63 111-75 169-37" fill="none" stroke="#5bbca6" stroke-width="18" stroke-linecap="round"/>
+  <path d="M623 340c-55-63-111-75-169-37" fill="none" stroke="#5bbca6" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="177" cy="340" r="16" fill="#103d3b"/>
+  <circle cx="623" cy="340" r="16" fill="#103d3b"/>
+</svg>
